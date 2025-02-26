@@ -79,3 +79,10 @@ temp/
 cursor-tutor/
 cursor-chat/
 
+# Powerpoint files
+*.ppt
+*.pptx
+*.pot
+*.potx
+*.ppsx
+*.pps
