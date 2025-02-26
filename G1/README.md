@@ -4,5 +4,5 @@ Repository for Node JS Basic.
 
 ## Team
 
-- Trainer: [John Doe](mailto:john.doe@example.com)
-- Assistant: [Jane Smith](mailto:jane.smith@example.com)
+- Trainer: [Aneta Stankovska](mailto:anetastankovskaane@gmail.com)
+- Assistant: [Igor Veic](mailto:igorveic7@gmail.com)
