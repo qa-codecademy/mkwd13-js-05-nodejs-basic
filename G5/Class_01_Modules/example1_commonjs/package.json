@@ -1,0 +1,13 @@
+{
+	"name": "example1_commonjs",
+	"version": "1.0.0",
+  "type": "commonjs",
+	"description": "## Windows Installation",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node index.js"
+	},
+	"author": "",
+	"license": "ISC"
+}
