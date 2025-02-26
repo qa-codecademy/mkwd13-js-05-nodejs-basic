@@ -36,6 +36,42 @@
    - Follow the installation wizard
    - Enter your administrator password when prompted
 
+## Installing Git Bash (Windows)
+
+Git Bash provides a Unix-like command-line environment on Windows, which can be helpful for following terminal commands that are written for Unix/Linux systems.
+
+1. **Download Git for Windows**
+
+   - Visit the official Git website: <https://git-scm.com/download/win>
+   - The download should start automatically
+   - If not, click on the appropriate download link for your system (32-bit or 64-bit)
+
+2. **Install Git Bash**
+
+   - Run the downloaded installer
+   - Click "Next" to proceed through the installation wizard
+   - Accept the license agreement
+   - Choose the default installation location (recommended)
+   - Select components (default options are recommended, ensure "Git Bash" is selected)
+   - Choose the default editor (you can select your preferred text editor)
+   - Adjust your PATH environment (recommended: "Git from the command line and also from 3rd-party software")
+   - Configure line ending conversions (recommended: "Checkout Windows-style, commit Unix-style line endings")
+   - Configure terminal emulator (recommended: "Use MinTTY")
+   - Configure extra options (default selections are recommended)
+   - Click "Install" to begin installation
+   - Click "Finish" when complete
+
+3. **Verify Installation**
+
+   - Search for "Git Bash" in the Start menu and open it
+   - Type the following command to verify Git is installed:
+
+   ```bash
+    git --version
+   ```
+
+- You should see the Git version number displayed
+
 ## Verify Installation
 
 After installation, verify that Node.js and NPM are correctly installed by opening a terminal (Command Prompt/PowerShell on Windows, Terminal on macOS) and running:
@@ -65,6 +101,17 @@ If you receive a "command not found" error:
    - Ensure Node.js is added to your PATH environment variable
    - Open System Properties > Advanced > Environment Variables
    - Check if Node.js paths are in the System Variables PATH
+   - If you encounter PowerShell script execution restrictions, you may need to change the execution policy:
+
+     ```powershell
+     # Run PowerShell as Administrator and execute:
+     Set-ExecutionPolicy Unrestricted
+
+     # After completing your work, it's recommended to reset to a more secure policy:
+     Set-ExecutionPolicy RemoteSigned
+     ```
+
+   - This allows scripts to run on your local machine while maintaining security
 
 2. **macOS:**
    - Restart your terminal
