@@ -13,8 +13,8 @@
 
 ## Bonus (OPTIONAL)
 
-1. Using the task service code from class, create a function called `editTask` that allows you to edit the task property (the text) of a selected task.
-2. Add an `owner` property (owner should be a random unique id, email or username) to all tasks and create a function `getTasksByOwner` that returns all tasks for a given owner's name.
+1. Using the task manager code from class, use the function called `markTaskAsCompleted` that allows you mark task as completed.
+2. Add an `owner` property (owner should be a random unique email, example: `some.user@mail.com`) to all tasks and create a function `getTasksByOwner` that returns all tasks for a given owner.
 3. Create a `deleteAll` function for the task service that deletes all tasks currently in `tasks.json`.
 
 _Note: These homework assignments are not meant to determine whether you pass Basic Node. They are designed to help you practice and become comfortable with the concepts as we progress. Feel free to review the code from yesterday, make edits, experiment with changes, and test out the file system and its various functions._
