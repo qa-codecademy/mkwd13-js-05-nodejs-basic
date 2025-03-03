@@ -6,7 +6,7 @@ try {
   const existingUsers = fs.readFileSync("users.json", "utf8");
   const parsedUsers = JSON.parse(existingUsers);
   console.log(parsedUsers);
-} catch {
+} catch (error) {
   console.log("Error reading file", error);
 }
 
