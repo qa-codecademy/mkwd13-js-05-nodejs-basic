@@ -11,36 +11,55 @@ const elephant = new Animal('Dumbo the Elephant');
 // console.log(elephant);
 
 // Create a zoo
-const theZoo = new Zoo();
+const skZoo = new Zoo();
+const btZoo = new Zoo();
+
+skZoo.addAnimal(lion);
+skZoo.addAnimal(monkey);
+skZoo.addAnimal(elephant);
+
+setInterval(() => {
+	const animals = [lion, monkey, elephant];
+	const randomAnimal = animals[Math.floor(Math.random() * animals.length)];
+
+	const actions = ['roar', 'eat', 'sleep', 'play'];
+	const randomAction = actions[Math.floor(Math.random() * actions.length)];
+
+	randomAnimal.doAction(randomAction);
+}, 2000);
 
 // console.log(theZoo);
+// skZoo.addAnimal(lion);
+// btZoo.addAnimal(monkey);
+// console.log(skZoo);
+// console.log(lion);
 
-// theZoo.addAnimal(lion);
-// console.log(theZoo);
+// skZoo.emit('animal:roar', lion);
+// lion.doAction('roar');
+// monkey.doAction('eat');
 
-// theZoo.emit('animal:roar', lion);
+// EXAMPLE FOR INHERITANCE - UNRELATED TO APP AND CODE ABOVE THIS LINe
+// class Vehicle {
+// 	drive() {
+// 		console.log('vehicle is driving');
+// 	}
+// }
 
-class Vehicle {
-	drive() {
-		console.log('vehicle is driving');
-	}
-}
+// const vehicle1 = new Vehicle();
+// vehicle1.drive();
 
-const vehicle1 = new Vehicle();
-vehicle1.drive();
+// class Car extends Vehicle {
+// 	constructor() {
+// 		super();
+// 	}
 
-class Car extends Vehicle {
-	constructor() {
-		super();
-	}
+// 	playingMusic() {
+// 		console.log('Car is playing music on the radio');
+// 	}
+// }
 
-	playingMusic() {
-		console.log('Car is playing music on the radio');
-	}
-}
+// const car1 = new Car();
+// car1.playingMusic();
+// car1.drive();
 
-const car1 = new Car();
-car1.playingMusic();
-car1.drive();
-
-vehicle1.playingMusic();
+// vehicle1.playingMusic();

@@ -7,4 +7,10 @@ export default class Animal {
 	setZoo(zoo) {
 		this.zoo = zoo;
 	}
+
+	doAction(action) {
+		if (this.zoo) {
+			this.zoo.emit(`animal:${action}`, this);
+		}
+	}
 }

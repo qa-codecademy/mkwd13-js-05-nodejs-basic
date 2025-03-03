@@ -36,11 +36,14 @@ Create a simple event-based counter application that demonstrates the basic usag
 
    - Emit a 'reset' event when the counter is reset
 
-3. Keep track of how many times the counter has been:
-   - Increased
-   - Decreased
-   - Reset
-   - Emit a 'stats' event with this information when requested
+## Bonus
+
+Keep track of how many times the counter has been:
+
+- Increased
+- Decreased
+- Reset
+- Emit a 'stats' event with this information when requested
 
 ## Example Usage
 
@@ -62,7 +65,7 @@ counter.decrease(); // "Number decreased to: 0"
 
 ## Submission
 
-Create a single JavaScript file named `homework.js` that includes:
+Create a single JavaScript file that includes:
 
 1. The Counter class implementation
 2. Example usage with event listeners
