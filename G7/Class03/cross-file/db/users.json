@@ -1,0 +1,12 @@
+[
+  {
+    "id": "0eeec8e8-a9bb-4d8c-8196-2bbeb251e9d1",
+    "email": "john@mail.com",
+    "password": "john.password"
+  },
+  {
+    "id": "49727741-b2bf-4853-a793-f27a2b53dcbe",
+    "email": "bob@mail.com",
+    "password": "bob.password"
+  }
+]
