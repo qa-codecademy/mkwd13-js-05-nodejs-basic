@@ -22,5 +22,11 @@
     "title": "Exercise Routine",
     "content": "40 minutes of jogging, 20 minutes of strength training.",
     "timestamp": "2024-03-02T18:00:00Z"
+  },
+  {
+    "id": 5,
+    "title": "Coding Notes",
+    "content": "Learn Nodejs and filesystem",
+    "timestamp": "2025-03-05T08:00:00Z"
   }
 ]
