@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "title": "Meeting Notes",
+    "content": "Discuss project updates and upcoming deadlines."
+  },
+  {
+    "id": 2,
+    "title": "Shopping List",
+    "content": "Milk, eggs, bread, vegetables, and fruits."
+  },
+  {
+    "id": 3,
+    "title": "Ideas for Blog",
+    "content": "Brainstorm topics and outline key points."
+  },
+  {
+    "id": 4,
+    "title": "Exercise Routine",
+    "content": "40 minutes of jogging, 20 minutes of strength training."
+  }
+]
