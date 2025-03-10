@@ -6,9 +6,11 @@ const app = express();
 const PORT = 3000;
 const HOSTNAME = 'localhost';
 
+// This is used in order to provide BODY from POST, PUT & PATCH request in req.body
+// Also it automatically parses the body so we get JS object in req.body
 app.use(express.json());
 
-// Data file paths
+// Data file paths (we can use the path module here for more proper usage)
 const TASKS_FILE_PATH = './data/tasks.json';
 
 // Routes
