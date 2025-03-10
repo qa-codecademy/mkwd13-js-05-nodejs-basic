@@ -4,3 +4,23 @@
     Date and time: 3/10/2025, 6:31:29 PM
     ----------------------
     
+    ----------------------
+    The user requested all notes.
+    Date and time: 3/10/2025, 6:52:55 PM
+    ----------------------
+    
+    ----------------------
+    The user requested all notes.
+    Date and time: 3/10/2025, 6:53:07 PM
+    ----------------------
+    
+    ----------------------
+    User created note: New note
+    Date and time: 3/10/2025, 6:56:31 PM
+    ----------------------
+    
+    ----------------------
+    User deleted note with ID: ff267b98-009c-44a2-b110-8d1560ae3407
+    Date and time: 3/10/2025, 6:59:23 PM
+    ----------------------
+    
