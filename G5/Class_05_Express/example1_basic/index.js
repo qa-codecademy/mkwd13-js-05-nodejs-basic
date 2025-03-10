@@ -5,9 +5,7 @@ const HOSTNAME = 'localhost';
 
 const app = express();
 
-app.listen(PORT, HOSTNAME, () => {
-	console.log(`Server started listening at http://${HOSTNAME}:${PORT}`);
-});
+app.use(express.json());
 
 // Most basic GET endpoint
 app.get('/', (req, res) => {
@@ -29,9 +27,27 @@ app.get('/hello/:name/:surname', (req, res) => {
 // }
 
 app.get('/products', (req, res) => {
-	console.log(req.url);
+	console.log(req.query);
 
-	res.send('Searching for...');
+	res.send(
+		`Searching for products in category ${req.query.category} in size ${req.query.size}`
+	);
+});
+
+app.get('/products', () => {});
+
+app.post('/products', (req, res) => {
+	res.send({
+		message: 'You have created the product:',
+		product: {
+			...req.body,
+			id: Date.now(),
+		},
+	});
+});
+
+app.listen(PORT, HOSTNAME, () => {
+	console.log(`Server started listening at http://${HOSTNAME}:${PORT}`);
 });
 
 // Example how overloads work
