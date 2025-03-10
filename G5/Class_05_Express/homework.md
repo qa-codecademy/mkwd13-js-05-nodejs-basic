@@ -26,18 +26,12 @@ Create a simple book library API using Express.js that allows users to manage a 
 
 ## Advanced Requirements 🚀
 
-1. Add input validation:
-
-   - Title and author should not be empty
-   - Year should be a valid number between 1900 and current year
-   - Return appropriate error messages
-
-2. Add query parameters to GET `/books`:
+1. Add query parameters to GET `/books`:
 
    - `/books?author=Author Name` - Filter books by author
    - `/books?year=2020` - Filter books by year
 
-3. Add a simple statistics endpoint:
+2. Add a simple statistics endpoint:
    - GET `/stats` - Returns:
      - Total number of books
      - Number of books per author
@@ -86,13 +80,10 @@ GET http://localhost:3000/stats
 Create a new folder with:
 
 1. `package.json` with required dependencies
-2. `server.js` containing your Express application
-3. README.md with instructions on how to run the application
+2. `index.js` containing your Express application
 
 ## Notes
 
-- Use proper error handling
-- Add comments to explain your code
 - Use appropriate HTTP status codes
 - Test all endpoints with different scenarios
 

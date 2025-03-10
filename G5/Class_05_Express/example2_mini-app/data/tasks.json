@@ -1,16 +1,9 @@
 [
   {
-    "title": "Write homework",
-    "description": "Express JS app",
-    "id": 1,
-    "completed": false,
-    "createdAt": "2025-03-10T19:17:43.566Z"
-  },
-  {
-    "title": "Go to class 6",
+    "title": "Go to class 7",
     "description": "Node js",
-    "id": 1,
+    "id": 2,
     "completed": false,
-    "createdAt": "2025-03-10T19:22:18.126Z"
+    "createdAt": "2025-03-10T20:10:45.187Z"
   }
 ]

@@ -31,7 +31,7 @@ app.post('/tasks', async (req, res) => {
 
 	const newTask = {
 		...req.body,
-		id: 1,
+		id: parsedTasks.length + 1,
 		completed: false,
 		createdAt: new Date().toISOString(),
 	};
@@ -40,14 +40,48 @@ app.post('/tasks', async (req, res) => {
 
 	await fs.writeFile(TASKS_FILE_PATH, JSON.stringify(parsedTasks, null, 2));
 
-	res.send(newTask);
+	res.status(201).send(newTask);
 });
 
 // Update an existing task
-app.put('/tasks', (req, res) => {});
+app.put('/tasks/:id', async (req, res) => {
+	const { id } = req.params; // Which task do we update
+	const { body } = req; // With what do we update
+
+	const tasks = await fs.readFile(TASKS_FILE_PATH, 'utf-8');
+	const parsedTasks = JSON.parse(tasks);
+
+	const index = parsedTasks.findIndex(task => task.id === parseInt(id));
+
+	if (index < 0) {
+		res.status(404).send({
+			error: `Task with id: ${id} not found!`,
+		});
+	}
+
+	parsedTasks[index] = {
+		...parsedTasks[index],
+		...body,
+	};
+
+	await fs.writeFile(TASKS_FILE_PATH, JSON.stringify(parsedTasks, null, 2));
+
+	res.send(parsedTasks[index]);
+});
 
 // Delete a task
-app.delete('/tasks', (req, res) => {});
+app.delete('/tasks/:id', async (req, res) => {
+	const { id } = req.params;
+
+	const tasks = await fs.readFile(TASKS_FILE_PATH, 'utf-8');
+	const parsedTasks = JSON.parse(tasks);
+
+	const filteredTasks = parsedTasks.filter(task => task.id !== parseInt(id));
+
+	await fs.writeFile(TASKS_FILE_PATH, JSON.stringify(filteredTasks, null, 2));
+
+	res.sendStatus(204);
+});
 
 app.listen(PORT, HOSTNAME, () => {
 	console.log(`Server is now listening at: http://${HOSTNAME}:${PORT}`);
