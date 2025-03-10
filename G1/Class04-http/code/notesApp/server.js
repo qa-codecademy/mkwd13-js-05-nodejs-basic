@@ -1,5 +1,5 @@
 import http from "node:http";
-import { v4 as uuid } from "uuid";
+import { v4 as uuidv4 } from "uuid";
 import loggerEmitter from "./loggerService.js";
 import { writeData, readData } from "./fileService.js";
 
