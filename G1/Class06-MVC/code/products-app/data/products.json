@@ -64,19 +64,19 @@
     "createdAt": "2024-03-13T08:35:00.000Z"
   },
   {
-    "id": "7fd8621d-d398-4b25-8de4-3f72a147f1e5",
-    "name": "Fitbit Charge 5 Fitness Tracker",
-    "description": "Advanced fitness tracker with built-in GPS, heart rate monitoring, ECG app, and a sleek design.",
-    "stock": 10,
-    "price": 149.99,
-    "createdAt": "2024-03-13T08:40:00.000Z"
-  },
-  {
     "id": "4f65e3d7-63c6-4295-b104-6b5a18c6f580",
     "name": "Microsoft Surface Pro 7",
     "description": "Versatile 2-in-1 laptop with a high-resolution PixelSense display, Intel Core i5 processor, and detachable keyboard.",
     "stock": 18,
     "price": 899.99,
     "createdAt": "2024-03-13T08:45:00.000Z"
+  },
+  {
+    "name": "Updated product",
+    "description": "Updated product description",
+    "stock": 10,
+    "price": 400.99,
+    "id": "9157c7a7-ffea-4ead-beb6-e109817e65bc",
+    "updatedAt": "2025-03-12T19:52:07.664Z"
   }
 ]
