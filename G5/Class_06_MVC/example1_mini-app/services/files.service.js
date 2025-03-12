@@ -17,3 +17,7 @@ export async function writeFile(fileName, data) {
 	const stringifiedData = JSON.stringify(data, null, 2);
 	await fs.writeFile(filePath(fileName), stringifiedData);
 }
+
+export async function appendFile(filename, log) {
+	await fs.appendFile(filePath(filename), log);
+}
