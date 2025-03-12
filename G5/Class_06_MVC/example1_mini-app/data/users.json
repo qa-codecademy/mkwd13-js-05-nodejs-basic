@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "name": "Ivo Kostovski",
+    "email": "ivo@kostovski.dev",
+    "id": 1,
+    "createdAt": "2025-03-12T18:26:55.938Z"
+  },
+  {
+    "name": "Daniel Ivtimov",
+    "email": "daniel@gmail.com",
+    "id": 2,
+    "createdAt": "2025-03-12T18:41:21.613Z"
+  }
+]

@@ -1,18 +1,34 @@
 import User from '../models/user.model.js';
 
 const UserController = {
-	getAllUsers(req, res) {
-		res.send('request to route users was invoked');
+	async getAllUsers(req, res) {
+		const users = await User.getAllUsers();
+
+		res.send(users);
 	},
-	getUserById(req, res) {
+	async getUserById(req, res) {
 		// const id = req.params.id
 		const {
 			params: { id },
 		} = req;
 
-		const user = User.getUserById(id);
+		const user = await User.getUserById(id);
+
+		if (!user) {
+			res.status(404).send({
+				error: 'User not found.',
+			});
+		}
 
 		res.send(user);
+	},
+	async createUser(req, res) {
+		// const body = req.body
+		const { body } = req;
+
+		const user = await User.createUser(body);
+
+		res.status(201).send(user);
 	},
 };
 

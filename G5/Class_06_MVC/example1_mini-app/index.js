@@ -11,6 +11,7 @@ const app = express();
 // Middleware
 app.use(express.json());
 
+// Routes
 app.use('/users', userRouter);
 
 // Starting the server
