@@ -1,5 +1,6 @@
 import express from 'express';
 import userRouter from './routes/user.routes.js';
+import logger from './middlewares/logger.middleware.js';
 
 // Defining consts
 const PORT = 3000;
@@ -10,7 +11,9 @@ const app = express();
 
 // Middleware
 app.use(express.json());
+app.use(logger);
 
+// Routes
 app.use('/users', userRouter);
 
 // Starting the server
