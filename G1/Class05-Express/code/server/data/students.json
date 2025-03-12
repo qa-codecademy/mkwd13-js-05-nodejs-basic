@@ -40,26 +40,6 @@
     "grade": 5
   },
   {
-    "id": "3454ff02-d39d-4819-802d-ed24ae2fef76",
-    "firstName": "Johnny",
-    "lastName": "Bravo",
-    "age": 20,
-    "gender": "M",
-    "email": "bravobravo@gmail.com",
-    "country": "US",
-    "grade": 1
-  },
-  {
-    "id": "3454ff02-d39d-4819-802d-ed24ae2fef76",
-    "firstName": "Mona",
-    "lastName": "Lisa",
-    "age": 20,
-    "gender": "F",
-    "email": "lisa321@gmail.com",
-    "country": "IT",
-    "grade": 5
-  },
-  {
     "id": "b36084fe-b782-4681-a8f8-9c13b60a6c73",
     "firstName": "Astom",
     "lastName": "Martin",
@@ -77,6 +57,16 @@
     "gender": "M",
     "country": "Turkey",
     "email": "bob.bobsky@gmail.com",
+    "grade": 4
+  },
+  {
+    "id": "32957421-44f0-4b52-ba8a-ed97c020c6a1",
+    "firstName": "Ivan",
+    "lastName": "Ivanovski",
+    "age": 25,
+    "gender": "F",
+    "country": "Italy",
+    "email": "jane.doe@gmail.com",
     "grade": 4
   }
 ]
