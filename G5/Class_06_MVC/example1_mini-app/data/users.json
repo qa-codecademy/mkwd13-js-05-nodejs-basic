@@ -16,5 +16,11 @@
     "email": "john@mail.com",
     "id": 3,
     "createdAt": "2025-03-12T19:21:13.808Z"
+  },
+  {
+    "name": "Jane Doe",
+    "email": "jane@mail.com",
+    "id": 4,
+    "createdAt": "2025-03-12T19:36:11.868Z"
   }
 ]
