@@ -1,0 +1,114 @@
+[
+  {
+    "id": "1",
+    "name": "T-shirt",
+    "color": "White",
+    "size": "M",
+    "material": "Cotton",
+    "price": 15.99
+  },
+  {
+    "id": "2",
+    "name": "Nice Jeans",
+    "color": "black",
+    "size": "L",
+    "material": "Cotton",
+    "price": 35
+  },
+  {
+    "id": "3",
+    "name": "Hoodie",
+    "color": "Gray",
+    "size": "L",
+    "material": "Fleece",
+    "price": 39.99
+  },
+  {
+    "id": "4",
+    "name": "Dress Shirt",
+    "color": "Light Blue",
+    "size": "15.5",
+    "material": "Cotton",
+    "price": 24.99
+  },
+  {
+    "id": "5",
+    "name": "Sneakers",
+    "color": "Black",
+    "size": "10",
+    "material": "Canvas",
+    "price": 49.99
+  },
+  {
+    "id": "6",
+    "name": "Skirt",
+    "color": "Red",
+    "size": "S",
+    "material": "Polyester",
+    "price": 19.99
+  },
+  {
+    "id": "7",
+    "name": "Sweater",
+    "color": "Green",
+    "size": "XL",
+    "material": "Wool",
+    "price": 34.99
+  },
+  {
+    "id": "8",
+    "name": "Dress",
+    "color": "Black",
+    "size": "M",
+    "material": "Silk",
+    "price": 59.99
+  },
+  {
+    "id": "9",
+    "name": "Jacket",
+    "color": "Khaki",
+    "size": "36",
+    "material": "Cotton",
+    "price": 22.99
+  },
+  {
+    "id": "14eba151-8639-40e7-b56a-cbacd020944a",
+    "name": "Sony PS5",
+    "color": "White",
+    "size": "slim",
+    "material": "plastic",
+    "price": 500
+  },
+  {
+    "id": "0f7e1e86-93d2-4549-b8be-1ba400de5975",
+    "name": "Lada Niva",
+    "color": "White",
+    "size": "3 doors",
+    "material": "metal",
+    "price": 2500
+  },
+  {
+    "id": "31dc0894-a421-498e-8c8f-f506dda4dfa8",
+    "name": "Skoda",
+    "color": "Red",
+    "size": "Sedan",
+    "material": "metal",
+    "price": 3500
+  },
+  {
+    "id": "7b6addfb-a2a8-43ef-9436-cb8c30e3d59b",
+    "name": "Laptop Lenovo Thinkpad",
+    "color": "Black",
+    "size": "13'",
+    "material": "alumium",
+    "price": 2500
+  },
+  {
+    "id": "ec45ec17-87fd-4b1d-8985-c06a29901fb2",
+    "name": "Macbook",
+    "color": "silver",
+    "size": "13'",
+    "material": "alumium",
+    "price": 2500
+  }
+]
