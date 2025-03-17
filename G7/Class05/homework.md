@@ -3,7 +3,7 @@
 
 ## Requirements:
 
-- Create an online bookstore where users can browse all available books, rent a specific book by its ID, and add a new book to the store.
+- Create an online bookstore where users can browse all available books and add a new book to the store.
 
 ### Expectations:
 
