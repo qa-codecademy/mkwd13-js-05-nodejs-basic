@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "366e893f-0168-4030-9fba-a7bdce346b51",
+		"name": "G7-Class07",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13244137"
+	},
+	"item": [
+		{
+			"name": "GET ALL TODOS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/todos",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE TODO",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Go to the gym\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/todos",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET TODO BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/todos/3",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"todos",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "COMPLETE TODO",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/todos/3",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"todos",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

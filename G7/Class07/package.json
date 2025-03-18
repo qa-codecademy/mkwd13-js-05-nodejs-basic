@@ -1,17 +1,19 @@
 {
-  "name": "mvc-part1",
+  "name": "class07",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "node --watch server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
+  "type": "module",
   "dependencies": {
-    "express": "^4.21.2"
-  },
-  "type": "module"
+    "express": "^4.21.2",
+    "uuid": "^11.1.0"
+  }
 }

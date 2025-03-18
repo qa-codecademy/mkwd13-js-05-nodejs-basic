@@ -1,0 +1,27 @@
+[
+    {
+        "id": "1",
+        "title": "Walk the dog",
+        "status": "PENDING"
+    },
+    {
+        "id": "2",
+        "title": "Learn nodejs",
+        "status": "PENDING"
+    },
+    {
+        "id": "3",
+        "title": "Go to barber",
+        "status": "COMPLETED"
+    },
+    {
+        "id": "12696232-23c4-4b9e-9392-0477d62a109c",
+        "title": "Cook dinner",
+        "status": "PENDING"
+    },
+    {
+        "id": "68beafcd-59ea-4ed8-b7a1-9d267bbf3fc6",
+        "title": "Go to the gym",
+        "status": "COMPLETED"
+    }
+]
