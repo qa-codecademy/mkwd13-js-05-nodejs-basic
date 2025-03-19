@@ -1,7 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import { connectDB } from "./config/db.js";
-// import router from "./routes/movie.routes.js";
+import router from "./routes/movie.routes.js";
 
 // Load environment variables
 dotenv.config();
@@ -13,7 +13,7 @@ const PORT = process.env.PORT;
 app.use(express.json());
 
 // Routes
-// app.use("/api/movies", router);
+app.use("/api/movies", router);
 
 app.get("/health", (req, res) => {
   res.json({ status: "OK" });
