@@ -50,28 +50,27 @@ export default class MovieController {
     try {
       const { name, description, genre, director, year } = req.body;
 
-      const movieData = {
-        ...(name && { name }),
-        ...(description && { description }),
-        ...(genre && { genre }),
-        ...(director && { director }),
-        ...(year && { year }),
-        ...(rating && { rating }),
-        updatedAt: new Date(),
-      };
+      // const movieData = {
+      //   ...(name && { name }),
+      //   ...(description && { description }),
+      //   ...(genre && { genre }),
+      //   ...(director && { director }),
+      //   ...(year && { year }),
+      //   updatedAt: new Date(),
+      // };
 
-      // const movieData = { updatetAt: new Date() };
-      // for (const [key, value] of Object.entries({
-      //   name,
-      //   description,
-      //   genre,
-      //   director,
-      //   year,
-      // })) {
-      //   if (value) {
-      //     movieData[key] = value;
-      //   }
-      // }
+      const movieData = { updatetAt: new Date() };
+      for (const [key, value] of Object.entries({
+        name,
+        description,
+        genre,
+        director,
+        year,
+      })) {
+        if (value) {
+          movieData[key] = value;
+        }
+      }
 
       // const movieData = {};
       // if (name) {
@@ -107,7 +106,7 @@ export default class MovieController {
       if (!success) {
         return res.status(404).json({ message: "Movie not found" });
       }
-      res.json({ message: "Movie delted successfully" });
+      res.json({ message: "Movie deleted successfully" });
     } catch (error) {
       res.status(500).json({ error: error.message });
     }
