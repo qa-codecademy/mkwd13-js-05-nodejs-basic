@@ -61,7 +61,6 @@ Create a Recipe schema with these fields:
 1. Simple Filtering:
 
    - GET `/recipes/category/:category` - Get recipes by category
-   - GET `/recipes/vegetarian` - Get vegetarian recipes
 
 2. Add simple search:
 

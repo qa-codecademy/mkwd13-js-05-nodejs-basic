@@ -1,6 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import Customer from './models/customer.model.js';
+import { customerSchema } from './schemas/customer.schema.js';
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -26,26 +27,40 @@ app.get('/api/customers', async (req, res) => {
 	res.send(customers);
 });
 
-app.post('/api/customers', async (req, res) => {
-	try {
-		const body = req.body;
+app.post(
+	'/api/customers',
+	async (req, res, next) => {
+		try {
+			await customerSchema.parseAsync(req.body);
 
-		const customer = new Customer({
-			name: body.name,
-			email: body.email,
-			location: body.location,
-			age: body.age,
-			phone: body.phone,
-		});
+			next();
+		} catch (error) {
+			res.status(400).send({
+				errors: error.errors,
+			});
+		}
+	},
+	async (req, res) => {
+		try {
+			const body = req.body;
 
-		const createdCustomer = await customer.save();
+			const customer = new Customer({
+				name: body.name,
+				email: body.email,
+				location: body.location,
+				age: body.age,
+				phone: body.phone,
+			});
 
-		// Return the created customer
-		res.status(201).send(createdCustomer);
-	} catch (error) {
-		res.status(500).send({ message: error.message });
+			const createdCustomer = await customer.save();
+
+			// Return the created customer
+			res.status(201).send(createdCustomer);
+		} catch (error) {
+			res.status(500).send({ message: error.message });
+		}
 	}
-});
+);
 
 async function init() {
 	const URI = `mongodb+srv://${MONGO_USERNAME}:${MONGO_PASSWORD}@${MONGO_CLUSTER}.mongodb.net/${MONGO_DB_NAME}?retryWrites=true&w=majority&appName=Cluster0`;
