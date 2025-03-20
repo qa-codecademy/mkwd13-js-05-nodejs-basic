@@ -59,7 +59,7 @@ export default class MovieController {
       //   updatedAt: new Date(),
       // };
 
-      const movieData = { updatetAt: new Date() };
+      const movieData = { updatedAt: new Date() };
       for (const [key, value] of Object.entries({
         name,
         description,
@@ -74,19 +74,19 @@ export default class MovieController {
 
       // const movieData = {};
       // if (name) {
-      //   movieData.name = name
+      //   movieData.name = name;
       // }
       // if (description) {
-      //   movieData.description = description
+      //   movieData.description = description;
       // }
       // if (genre) {
-      //   movieData.genre = genre
+      //   movieData.genre = genre;
       // }
       // if (director) {
-      //   movieData.director = director
+      //   movieData.director = director;
       // }
       // if (year) {
-      //   movieData.year = year
+      //   movieData.year = year;
       // }
       // movieData.updatedAt = new Date();
 
