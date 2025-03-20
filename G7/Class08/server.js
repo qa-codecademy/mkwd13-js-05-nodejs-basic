@@ -1,6 +1,11 @@
 import express from "express";
 import { mongoConnection } from "./database/mongo-connection.js"
+import productRouter from "./routes/products.router.js";
+
 const server = express();
+
+server.use(express.json()); // server knows how to read/parse json request body
+server.use(productRouter);
 
 // req => request
 // res => response
