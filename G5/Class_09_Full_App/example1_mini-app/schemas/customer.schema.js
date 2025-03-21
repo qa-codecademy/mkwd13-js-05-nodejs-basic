@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const customerSchema = z.object({
+export const createCustomerSchema = z.object({
 	name: z
 		.string()
 		.min(2, 'Name must be at least 2 characters long')
@@ -10,3 +10,5 @@ export const customerSchema = z.object({
 	age: z.number().min(18, 'Customer must be at least 18 years old'),
 	location: z.string().optional(),
 });
+
+export const updateCustomerSchema = createCustomerSchema.partial();

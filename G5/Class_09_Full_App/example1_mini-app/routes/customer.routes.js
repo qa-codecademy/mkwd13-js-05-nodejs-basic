@@ -1,6 +1,10 @@
 import { Router } from 'express';
 import CustomerController from '../controllers/customer.controller.js';
-import validateCustomerRequest from '../middlewares/validate-customer-req.mid.js';
+import validateRequest from '../middlewares/validate-request.middleware.js';
+import {
+	createCustomerSchema,
+	updateCustomerSchema,
+} from '../schemas/customer.schema.js';
 
 const router = Router();
 // /api/customers
@@ -9,12 +13,21 @@ const router = Router();
 router.get('', CustomerController.getAllCustomers);
 
 // Get a single customer
+router.get('/:email', CustomerController.getCustomerByEmail);
 
 // Create a new customer
-router.post('', validateCustomerRequest, CustomerController.createCustomer);
+router.post(
+	'',
+	validateRequest(createCustomerSchema),
+	CustomerController.createCustomer
+);
 
 // Update a customer
-router.put('/:id', validateCustomerRequest, CustomerController.updateCustomer);
+router.put(
+	'/:id',
+	validateRequest(updateCustomerSchema),
+	CustomerController.updateCustomer
+);
 
 // Delete a customer
 
