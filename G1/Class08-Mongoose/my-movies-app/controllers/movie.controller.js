@@ -7,7 +7,12 @@ export default class MovieController {
 
   async getMovies(req, res) {
     try {
-      const movies = await this.movieService.getAll();
+      const filter = {};
+
+      if (req.query.genre) {
+        filter.genre = req.query.genre;
+      }
+      const movies = await this.movieService.getAll(filter);
       res.send(movies);
     } catch (error) {
       res.status(400).send({ message: error.message });

@@ -2,8 +2,13 @@ import Movie from "../schemas/movie.schema.js";
 import "../schemas/director.schema.js"; // must import the director schema bcause the movie schema uses it
 
 export default class MovieService {
-  async getAll() {
-    const data = Movie.find({}).populate("director");
+  async getAll(filter = {}) {
+    const data = Movie.find(filter)
+      // case-insensitive matching
+      // locale: "en": the comparison should use English language rules
+      // strength: 2: Compares the base characters and diacritics but ignores case differences
+      .collation({ locale: "en", strength: 2 })
+      .populate("director");
     return data;
   }
 
