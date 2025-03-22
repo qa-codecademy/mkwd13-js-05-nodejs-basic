@@ -26,7 +26,10 @@ app.get('/');
 // Routes
 app.use('/api/customers', customerRoutes);
 
-// Anonymous Self-Invoked-Function
+// Anonymous Self-Invoked-Function or also called IIFE (Immediately Invoked Function Expression)
+// This is a function that is defined and executed immediately after it is defined.
+// We use this to avoid polluting the global namespace.
+
 (async () => {
 	try {
 		await mongoose.connect(URI);

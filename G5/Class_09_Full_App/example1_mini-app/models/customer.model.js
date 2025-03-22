@@ -1,5 +1,6 @@
 import { Schema, model } from 'mongoose';
 
+// first we define the schema
 const customerSchema = new Schema({
 	name: {
 		type: String,
@@ -29,6 +30,8 @@ const customerSchema = new Schema({
 	},
 });
 
+// then we create the model
 const Customer = model('customers', customerSchema);
 
+// then we export the model
 export default Customer;
