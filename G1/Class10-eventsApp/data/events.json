@@ -1,0 +1,142 @@
+[
+  {
+    "_id": { "$oid": "67deff0e77558ffa89e16404" },
+    "artist": "Coldplay",
+    "location": "Madrid",
+    "date": { "$date": "2025-04-01T21:00:00.000Z" },
+    "ticketPrice": 30
+  },
+  {
+    "_id": { "$oid": "67deff0e77558ffa89e16405" },
+    "artist": "James Blunt",
+    "location": "London",
+    "date": { "$date": "2025-04-02T20:30:00.000Z" },
+    "ticketPrice": 95
+  },
+  {
+    "_id": { "$oid": "67deff0e77558ffa89e16406" },
+    "artist": "Taylor Swift",
+    "location": "Paris",
+    "date": { "$date": "2025-04-03T19:45:00.000Z" },
+    "ticketPrice": 150
+  },
+  {
+    "_id": { "$oid": "67deff0e77558ffa89e16407" },
+    "artist": "Harry Styles",
+    "location": "Madrid",
+    "date": { "$date": "2025-04-04T21:00:00.000Z" },
+    "ticketPrice": 120
+  },
+  {
+    "_id": { "$oid": "67deff0e77558ffa89e16408" },
+    "artist": "Adele",
+    "location": "London",
+    "date": { "$date": "2025-04-05T20:00:00.000Z" },
+    "ticketPrice": 180
+  },
+  {
+    "_id": { "$oid": "67deff0e77558ffa89e16409" },
+    "artist": "The Weeknd",
+    "location": "Paris",
+    "date": { "$date": "2025-04-06T20:30:00.000Z" },
+    "ticketPrice": 135
+  },
+  {
+    "_id": { "$oid": "67deff0e77558ffa89e1640a" },
+    "artist": "Billie Eilish",
+    "location": "Madrid",
+    "date": { "$date": "2025-04-07T21:00:00.000Z" },
+    "ticketPrice": 110
+  },
+  {
+    "_id": { "$oid": "67deff0e77558ffa89e1640b" },
+    "artist": "Bruno Mars",
+    "location": "London",
+    "date": { "$date": "2025-04-08T19:30:00.000Z" },
+    "ticketPrice": 140
+  },
+  {
+    "_id": { "$oid": "67deff0e77558ffa89e1640c" },
+    "artist": "Olivia Rodrigo",
+    "location": "Paris",
+    "date": { "$date": "2025-04-09T20:00:00.000Z" },
+    "ticketPrice": 85
+  },
+  {
+    "_id": { "$oid": "67deff0e77558ffa89e1640d" },
+    "artist": "Ed Sheeran",
+    "location": "Madrid",
+    "date": { "$date": "2025-04-10T21:00:00.000Z" },
+    "ticketPrice": 125
+  },
+  {
+    "_id": { "$oid": "67deff0e77558ffa89e1640e" },
+    "artist": "Sam Smith",
+    "location": "London",
+    "date": { "$date": "2025-04-11T20:00:00.000Z" },
+    "ticketPrice": 70
+  },
+  {
+    "_id": { "$oid": "67deff0e77558ffa89e1640f" },
+    "artist": "Shakira",
+    "location": "Paris",
+    "date": { "$date": "2025-04-12T21:00:00.000Z" },
+    "ticketPrice": 95
+  },
+  {
+    "_id": { "$oid": "67deff0e77558ffa89e16410" },
+    "artist": "Justin Bieber",
+    "location": "Madrid",
+    "date": { "$date": "2025-04-13T20:30:00.000Z" },
+    "ticketPrice": 160
+  },
+  {
+    "_id": { "$oid": "67deff0e77558ffa89e16411" },
+    "artist": "Selena Gomez",
+    "location": "London",
+    "date": { "$date": "2025-04-14T19:30:00.000Z" },
+    "ticketPrice": 100
+  },
+  {
+    "_id": { "$oid": "67deff0e77558ffa89e16412" },
+    "artist": "Rihanna",
+    "location": "Paris",
+    "date": { "$date": "2025-04-15T20:00:00.000Z" },
+    "ticketPrice": 200
+  },
+  {
+    "_id": { "$oid": "67deff0e77558ffa89e16413" },
+    "artist": "Ariana Grande",
+    "location": "Madrid",
+    "date": { "$date": "2025-04-16T21:00:00.000Z" },
+    "ticketPrice": 130
+  },
+  {
+    "_id": { "$oid": "67deff0e77558ffa89e16414" },
+    "artist": "Beyonce",
+    "location": "London",
+    "date": { "$date": "2025-04-17T20:30:00.000Z" },
+    "ticketPrice": 105
+  },
+  {
+    "_id": { "$oid": "67deff0e77558ffa89e16415" },
+    "artist": "Pink",
+    "location": "Paris",
+    "date": { "$date": "2025-04-18T21:00:00.000Z" },
+    "ticketPrice": 60
+  },
+  {
+    "_id": { "$oid": "67deff0e77558ffa89e16416" },
+    "artist": "Lana Del Rey",
+    "location": "Madrid",
+    "date": { "$date": "2025-04-19T20:00:00.000Z" },
+    "ticketPrice": 50
+  },
+  {
+    "_id": { "$oid": "67deff0e77558ffa89e16417" },
+    "artist": "Miley Cyrus",
+    "location": "London",
+    "date": { "$date": "2025-04-20T19:45:00.000Z" },
+    "ticketPrice": 45
+  }
+]
