@@ -2,7 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 // import { config } from "dotenv";
 import { connectDB } from "./config/db.js";
-// import eventRouter from "./routes/event.routes.js";
+import eventRouter from "./routes/event.routes.js";
 
 // Load environment variables
 dotenv.config();
@@ -14,7 +14,7 @@ const PORT = process.env.PORT;
 app.use(express.json());
 
 // Routes
-// app.use("/api/events", eventRouter);
+app.use("/api/events", eventRouter);
 
 app.get("/health", (req, res) => {
   res.json({ status: "OK" });
