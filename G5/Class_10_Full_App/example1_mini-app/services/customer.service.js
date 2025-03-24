@@ -1,10 +1,17 @@
 import Customer from '../models/customer.model.js';
+import Repair from '../models/repair.model.js';
 
 const CustomerService = {
 	async getAllCustomers() {
 		const customers = await Customer.find();
 
 		return customers;
+	},
+
+	async getRepairById(id) {
+		const repairDetails = await Repair.findById(id).populate(['customer']);
+
+		return repairDetails;
 	},
 
 	async getCustomerByEmail(email) {

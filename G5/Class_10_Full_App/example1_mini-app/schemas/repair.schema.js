@@ -1,6 +1,7 @@
 import { z } from 'zod';
 
 export const createRepairSchema = z.object({
+	customerId: z.string(),
 	carModel: z
 		.string()
 		.min(2, 'Car model must be at least 2 characters')
@@ -12,6 +13,5 @@ export const createRepairSchema = z.object({
 	problem: z
 		.string()
 		.min(10, 'Problem description must be at least 10 characters long'),
-	status: z.enum(['pending', 'in_progress', 'completed']),
 	estimatedCost: z.number().positive('Cost must be a positive number'),
 });

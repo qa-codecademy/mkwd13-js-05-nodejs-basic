@@ -2,6 +2,11 @@ import { Schema, model } from 'mongoose';
 
 const repairSchema = new Schema(
 	{
+		customer: {
+			type: Schema.Types.ObjectId,
+			ref: 'customers',
+			required: true,
+		},
 		carModel: {
 			type: String,
 			required: true,
