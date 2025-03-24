@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Concert Event</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#" id="nav-events">Events</a></li>
+        <li><a href="#" id="nav-add-event">Add Event</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <!-- Events List -->
+      <section id="events-section" class="section">
+        <h1>All Events</h1>
+        <div id="eventsList">Loading...</div>
+      </section>
+
+      <!-- Add Event Form -->
+      <section id="add-event-section" class="section hidden">
+        <h1>Add Concert Event</h1>
+        <form id="eventForm">
+          <label>
+            Artist:
+            <input type="text" id="artist" name="artist" required />
+          </label>
+
+          <label>
+            Location:
+            <select id="location" name="location" required>
+              <option value="">Select city</option>
+              <option value="Madrid">Madrid</option>
+              <option value="London">London</option>
+              <option value="Paris">Paris</option>
+            </select>
+          </label>
+
+          <label>
+            Date:
+            <input type="datetime-local" id="date" name="date" required />
+          </label>
+
+          <label>
+            Ticket Price (€):
+            <input
+              type="number"
+              id="ticketPrice"
+              name="ticketPrice"
+              min="5"
+              max="300"
+              required
+            />
+          </label>
+
+          <button type="submit">Add Event</button>
+          <div id="responseMessage"></div>
+        </form>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
