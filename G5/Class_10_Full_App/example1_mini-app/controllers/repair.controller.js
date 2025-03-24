@@ -4,7 +4,7 @@ import RepairService from '../services/repair.service.js';
 const RepairController = {
 	async getRepairs(req, res) {
 		try {
-			const repairs = await RepairService.getRepairs();
+			const repairs = await RepairService.getRepairs(req.query);
 
 			res.send(repairs);
 		} catch (error) {

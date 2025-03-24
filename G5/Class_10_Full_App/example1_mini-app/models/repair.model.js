@@ -29,6 +29,16 @@ const repairSchema = new Schema(
 			type: Number,
 			required: true,
 		},
+		originalCost: {
+			type: Number,
+			required: true,
+		},
+		discount: {
+			type: Number,
+			required: true,
+			min: 0,
+			max: 1,
+		},
 	},
 	{
 		timestamps: true,

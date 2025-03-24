@@ -675,13 +675,40 @@
 							"response": []
 						},
 						{
+							"name": "Get customer by email",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/customers/:email",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"customers",
+										":email"
+									],
+									"variable": [
+										{
+											"key": "email",
+											"value": "john13@gmail.com"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "Create Customer",
 							"request": {
 								"method": "POST",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"name\": \"John Doe\",\n    \"email\": \"john4@gmail.com\",\n    \"location\": \"Tetovo\",\n    \"age\": 70\n}",
+									"raw": "{\n    \"name\": \"John Doe\",\n    \"email\": \"john8@gmail.com\",\n    \"location\": \"Tetovo\",\n    \"age\": 70\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -710,7 +737,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n        \n        \"name\": \"John Doe\",\n        \"email\": \"john3@gmail.com\",\n        \"age\": 40,\n        \"location\": \"Tetovo\"\n        \n    }",
+									"raw": "{\n    \"age\": 71\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -732,7 +759,7 @@
 									"variable": [
 										{
 											"key": "id",
-											"value": "67ddb071d1b79e6cb74c885f"
+											"value": "67e192f27b32daba0d65a635"
 										}
 									]
 								}
@@ -740,12 +767,12 @@
 							"response": []
 						},
 						{
-							"name": "Get user by email",
+							"name": "Get repairs",
 							"request": {
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:3000/api/customers/:email",
+									"raw": "http://localhost:3000/api/repairs?minCost=80&maxCost=90",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -753,14 +780,83 @@
 									"port": "3000",
 									"path": [
 										"api",
-										"customers",
-										":email"
+										"repairs"
+									],
+									"query": [
+										{
+											"key": "carModel",
+											"value": "Toyota",
+											"disabled": true
+										},
+										{
+											"key": "carLicensePlate",
+											"value": "SK1234AZ",
+											"disabled": true
+										},
+										{
+											"key": "minCost",
+											"value": "80"
+										},
+										{
+											"key": "maxCost",
+											"value": "90"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get repair by ID with details",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/repairs/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"repairs",
+										":id"
 									],
 									"variable": [
 										{
-											"key": "email",
-											"value": "john2@gmail.com"
+											"key": "id",
+											"value": "67e1b18a475eeda0ba56ef1c"
 										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create repair",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"customerId\": \"67db00c2b3d95435feee0b5c\",\n    \"carModel\": \"Nissan\",\n    \"carLicensePlate\": \"TE4214Ga\",\n    \"problem\": \"Rasipana e epten, ne pali skroz\",\n    \"estimatedCost\": 126\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/repairs",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"repairs"
 									]
 								}
 							},
