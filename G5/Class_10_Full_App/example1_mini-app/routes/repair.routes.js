@@ -9,7 +9,7 @@ router.get('', RepairController.getRepairs);
 router.get('/:id', RepairController.getRepairById);
 router.post(
 	'',
-	validateRequest(createRepairSchema),
+	validateRequest(createRepairSchema), // we validate the request body using the createRepairSchema and the validateRequest middleware
 	RepairController.createRepair
 );
 

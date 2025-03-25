@@ -1,5 +1,7 @@
-import CustomerService from '../services/customer.service.js';
 import RepairService from '../services/repair.service.js';
+
+// With introduction of services, we can now use the service layer to handle the business logic and keep the controller layer clean and simple.
+// Now the controller is only responsible for receiving the request, calling the service layer, and sending the response.
 
 const RepairController = {
 	async getRepairs(req, res) {
@@ -16,7 +18,7 @@ const RepairController = {
 
 	async getRepairById(req, res) {
 		try {
-			const repairDetails = await CustomerService.getRepairById(req.params.id);
+			const repairDetails = await RepairService.getRepairById(req.params.id);
 
 			res.send(repairDetails);
 		} catch (error) {

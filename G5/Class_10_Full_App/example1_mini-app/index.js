@@ -22,6 +22,7 @@ const app = express();
 app.use(express.json());
 
 // Routes
+// all routes usually start with /api to differentiate them from the routes used for the frontend
 app.use('/api', router);
 
 // Anonymous Self-Invoked-Function or also called IIFE (Immediately Invoked Function Expression)

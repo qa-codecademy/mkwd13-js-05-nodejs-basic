@@ -22,7 +22,7 @@ const repairSchema = new Schema(
 		},
 		status: {
 			type: String,
-			enum: ['pending', 'in_progress', 'completed'],
+			enum: ['pending', 'in_progress', 'completed'], // enum is used to restrict the values that can be assigned to a field
 			default: 'pending',
 		},
 		estimatedCost: {

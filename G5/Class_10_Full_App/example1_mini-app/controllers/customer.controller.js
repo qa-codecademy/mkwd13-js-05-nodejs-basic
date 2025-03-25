@@ -1,5 +1,8 @@
 import CustomerService from '../services/customer.service.js';
 
+// With introduction of services, we can now use the service layer to handle the business logic and keep the controller layer clean and simple.
+// Now the controller is only responsible for receiving the request, calling the service layer, and sending the response.
+
 const CustomerController = {
 	async getAllCustomers(req, res) {
 		const customers = await CustomerService.getAllCustomers();
@@ -9,7 +12,6 @@ const CustomerController = {
 
 	async getCustomerByEmail(req, res) {
 		try {
-			// we use the findOne method to get a single customer from the database using the email for filtering
 			const customer = await CustomerService.getCustomerByEmail(
 				req.params.email
 			);
