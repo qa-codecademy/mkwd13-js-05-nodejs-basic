@@ -1,5 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
+import cors from "cors";
 // import { config } from "dotenv";
 import { connectDB } from "./config/db.js";
 import eventRouter from "./routes/event.routes.js";
@@ -12,6 +13,13 @@ const PORT = process.env.PORT;
 
 // Define the type of data
 app.use(express.json());
+
+app.use(
+  cors({
+    origin: "*", // allow all origins
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  })
+);
 
 // Routes
 app.use("/api/events", eventRouter);
