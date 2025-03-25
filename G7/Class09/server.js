@@ -1,16 +1,14 @@
 import express from "express";
 import { mongo_connection } from "./mongo-connection.js";
-import { productMongoModel } from "./schemas/product.schema.js";
+import productRouter from "./routes/products.router.js";
+import orderRouter from "./routes/order.router.js";
 
 const server = express();
+server.use(express.json());
 
-// GET ALL PRODUCTS
-server.get("/products", async (req, res) => {
-   const products = await productMongoModel.find();
-
-   res.send(products)
-});
-
+server.use(productRouter);
+server.use(orderRouter);
+ 
 server.listen(3001, "localhost", async () => {
     console.log('Server is up and running');
     await mongo_connection()
