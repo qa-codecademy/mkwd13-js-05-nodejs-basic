@@ -45,6 +45,54 @@ Each recipe object should contain the following properties:
 - **DELETE RECIPE BY ID**: Remove a specific recipe from the database by its ID.
 - **EDIT RECIPE BY ID**: Update the details of a specific recipe by its ID.
 
+
+## Bonus Task (Optional but recommended)
+
+Create a new schema called `Chef`, and in your `Recipe` schema, reference the chef using `ObjectId`.
+
+### 👨‍🍳 Chef Schema example
+
+```js
+{
+  name: String,
+  experience: String,
+  specialty: String
+}
+```
+
+### Updates in Recipe Schema
+
+```js
+chef: {
+  type: mongoose.Schema.Types.ObjectId,
+  ref: "Chef"
+}
+```
+
+### Additional Endpoints for Chef
+
+To manage chefs, implement these two basic endpoints:
+
+- POST /chefs → Create a new chef
+
+Request body should include name, experience, and specialty.
+
+- GET /chefs → Retrieve all chefs
+
+Optionally, you can also implement GET /chefs/:id to retrieve a specific chef if you'd like.
+
+💡 Tip
+
+When retrieving recipes, don’t forget to use .populate("chef") in your
+.find() call to include full chef details in each recipe:
+
+```js
+RecipeModel.find().populate("chef");
+```
+
+This will return each recipe with the associated chef’s name, experience, and specialty included in the response.
+
 ## Additional Information
 
 - For those unable to create their MongoDB cluster, a cluster has been set up with the database name `recipe-db` and the collection name `recipes`. The connection string provided during the class session can be used for this purpose. (const NEW_URL = "mongodb+srv://gjorge:qwert_123@cluster0.x196b.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+
